@@ -1,0 +1,24 @@
+{
+  "name": "devtools-artifact-lifecycle",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/src/artifact_retention_service.js",
+    "dev": "tsx src/artifact_retention_service.ts",
+    "configure": "tsx scripts/configure_retention.ts",
+    "cleanup": "tsx scripts/cleanup_retention.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

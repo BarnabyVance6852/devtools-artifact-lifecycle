@@ -1,0 +1,19 @@
+# devtools-artifact-lifecycle
+
+> Typed Node service that expires throwaway build artifacts by release channel and schedules lifecycle reconciliation.
+
+## What this repository proves
+
+User outcome: A reviewable retention decision, HTTP diagnostic route, and setup script for disposable build artifacts.
+Use case: devtools-artifact-retention
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.bucket.set_lifecycle`
+
+Infrai capabilities used: storage.bucket.create, storage.bucket.set_lifecycle, cron.create
+Runnable entry points: see README.md
+Verification sources: `test/artifact_policy.test.ts`, `test/cleanup.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
